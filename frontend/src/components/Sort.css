@@ -1,0 +1,72 @@
+/* Container for the sorting form */
+.sort-selection {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Styling for the label */
+.sort-label {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  color: #222; /* Slightly darker for readability */
+}
+
+/* Simplified styling for the dropdown */
+.sort-selection-style {
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  max-width: 200px; /* Limit width for larger screens */
+}
+
+/* Hover effect */
+.sort-selection-style:hover {
+  border-color: #aaa;
+}
+
+/* Focus effect */
+.sort-selection-style:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.4);
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and medium screens */
+@media (max-width: 768px) {
+  .sort-selection {
+    justify-content: center; /* Center align on smaller screens */
+  }
+
+  .sort-label {
+    font-size: 0.9rem; /* Slightly smaller font size */
+    margin-right: 0.5rem;
+  }
+
+  .sort-selection-style {
+    width: 100%; /* Full width for better fit on smaller screens */
+    max-width: none; /* Remove max-width restriction */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .sort-label {
+    font-size: 0.8rem; /* Further reduce font size */
+    margin-right: 0.3rem; /* Adjust margin */
+  }
+
+  .sort-selection-style {
+    padding: 0.3rem 0.6rem; /* Adjust padding for smaller screens */
+    font-size: 0.9rem; /* Slightly smaller font size */
+  }
+}

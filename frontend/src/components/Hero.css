@@ -1,0 +1,181 @@
+/* Container styling */
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+/* Hero grid styling */
+.hero-grid {
+  margin-top: 7%;
+  width: 60%;
+  display: grid;
+  column-gap: 5rem;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center; /* Center items vertically */
+}
+
+/* Text section styling */
+.welcome-p {
+  color: rgb(160, 161, 163);
+  margin: 0;
+}
+
+.text-p {
+  color: rgb(160, 161, 163);
+}
+
+.shop-heading {
+  font-family: "Open Sans", sans-serif; /* Apply Open Sans font */
+  font-weight: 600; /* Semi-bold for subtle emphasis */
+  font-size: 1.8rem; /* Slightly larger font size for visibility */
+  color: #333; /* Dark grey color for a professional look */
+  text-transform: uppercase; /* Ensure all letters are uppercase */
+  white-space: nowrap; /* Keep the text on one line */
+  text-align: center; /* Center the text */
+  display: inline-block; /* Treat the text as a single block */
+  padding: 0.5rem 1rem; /* Add minimal padding for a clean appearance */
+  border: 2px solid #333; /* Simple border for definition */
+  border-radius: 4px; /* Slight rounding for a modern touch */
+  background-color: #fff; /* White background for a clean look */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.shop-heading:hover {
+  background-color: #333; /* Dark background on hover */
+  color: #fff; /* White text on hover for contrast */
+  cursor: pointer; /* Indicate interactiveness */
+}
+
+/* Image section styling */
+.image-section {
+  text-align: center;
+  position: relative; /* Position relative to contain the pseudo-elements */
+  display: inline-block; /* Ensure the image and its shadow are treated as one block */
+}
+
+.image-section img {
+  width: 33rem;
+  border-radius: 10px; /* Smooth rounding for a modern look */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Deep shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+  position: relative; /* Position relative for z-index layering */
+  z-index: 2; /* Ensure the image is above the background effect */
+}
+
+.image-section::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(
+    135deg,
+    rgba(31, 221, 116, 0.3),
+    rgba(193, 19, 98, 0.3)
+  );
+  border-radius: 15px; /* Slightly larger rounding for a layered effect */
+  z-index: 1; /* Place below the image */
+}
+
+.image-section img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3); /* Increase shadow for emphasis */
+}
+
+/* Hero button styling */
+.hero-btn {
+  display: inline-block;
+  padding: 8px 16px; /* Balanced padding for a neat appearance */
+  font-family: "Open Sans", sans-serif; /* Clean and professional font */
+  font-size: 1rem; /* Adequate size for readability */
+  font-weight: 600; /* Bold text for prominence */
+  text-transform: uppercase; /* Ensures the text is in uppercase */
+  color: #ffffff; /* White text color for contrast */
+  background-color: #007bff; /* Classic blue color for a professional look */
+  border: none; /* No border for a cleaner design */
+  border-radius: 2px; /* Slight rounding for modern appearance */
+  text-align: center; /* Center-align text */
+  cursor: pointer; /* Indicate it's clickable */
+}
+
+.hero-btn:hover {
+  background-color: #0056b3; /* Darker blue for hover effect */
+  color: #ffffff; /* White text remains consistent */
+}
+
+.hero-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .hero-grid {
+    width: 80%; /* Adjust width for tablets and smaller screens */
+    column-gap: 2rem; /* Reduce column gap */
+  }
+
+  .image-section img {
+    width: 25rem; /* Reduce image width */
+  }
+
+  .shop-heading {
+    font-size: 1.6rem; /* Reduce font size */
+    padding: 0.4rem 0.8rem; /* Adjust padding */
+  }
+
+  .hero-btn {
+    padding: 6px 12px; /* Adjust padding */
+    font-size: 0.9rem; /* Reduce font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    width: 90%; /* Further adjust width for mobile devices */
+    grid-template-columns: 1fr; /* Stack items in a single column */
+    column-gap: 1rem; /* Further reduce column gap */
+  }
+
+  .image-section img {
+    width: 20rem; /* Further reduce image width */
+  }
+
+  .shop-heading {
+    font-size: 1.4rem; /* Further reduce font size */
+    padding: 0.3rem 0.6rem; /* Adjust padding */
+  }
+
+  .hero-btn {
+    padding: 5px 10px; /* Adjust padding */
+    font-size: 0.8rem; /* Further reduce font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px; /* Add padding for very small screens */
+  }
+
+  .hero-grid {
+    width: 100%; /* Full width for very small screens */
+  }
+
+  .image-section img {
+    width: 100%; /* Full width images */
+    max-width: 300px; /* Maximum width to maintain aspect ratio */
+  }
+
+  .shop-heading {
+    font-size: 1.2rem; /* Further reduce font size */
+    padding: 0.2rem 0.5rem; /* Adjust padding */
+  }
+
+  .hero-btn {
+    padding: 4px 8px; /* Adjust padding */
+    font-size: 0.7rem; /* Further reduce font size */
+  }
+}

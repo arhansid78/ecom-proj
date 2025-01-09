@@ -1,0 +1,220 @@
+/* General Styles */
+.grid2-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #f0f0f0; /* Light background for the grid container */
+}
+
+.single-product-grid {
+  width: 70%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5rem;
+  height: 80vh;
+  border-radius: 10px; /* Rounds the corners of the grid container */
+}
+
+/* Navigation Bar */
+.navi-gation-bar a {
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.navi-gation-bar {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+/* Truck Data Warranty */
+.truck-data-warranty {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Optional: add padding for better spacing */
+  border-bottom: 1px solid #ccc; /* Adds a vertical line at the bottom */
+}
+
+.warranty-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #007bff; /* Example: blue background color */
+  border-radius: 50%; /* Circular icon */
+  color: white; /* Icon color */
+  font-size: 20px; /* Adjust font size based on icon */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+.product-waranty-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-waranty-data p {
+  text-transform: capitalize;
+}
+
+.product-data-info {
+  margin-top: 1rem;
+}
+
+.product-data-info span {
+  font-weight: bold; /* Make the text inside span bold */
+  color: #333; /* Ensure the text color contrasts with the background */
+}
+
+.product-data-info {
+  border-bottom: 3px solid #ccc; /* Adds a vertical line at the bottom */
+}
+
+.last-part {
+  width: 100%;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-to-cart {
+  display: flex;
+  align-items: center;
+}
+
+.icon-btn-style {
+  font-size: 20px;
+  color: #007bff;
+  margin: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.inc-dec {
+  margin: 20px;
+  font-size: larger;
+}
+
+.add-to-cart-style p {
+  font-size: 14px; /* Set the font size */
+  color: #fff; /* White text color */
+  background-color: #007bff; /* Blue background color */
+  padding: 4px 14px; /* Add padding around the text */
+  border-radius: 2px; /* Round the corners */
+  display: inline-block; /* Make the element only as wide as its content */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  text-align: center; /* Center the text */
+  font-weight: bold; /* Make the text bold */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for hover effects */
+  user-select: none; /* Prevent text selection */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  text-transform: capitalize;
+}
+
+.add-to-cart-button p:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.real-price {
+  color: #328def;
+  font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and medium screens */
+@media (max-width: 768px) {
+  .single-product-grid {
+    width: 90%; /* Increase width for smaller screens */
+    grid-template-columns: 1fr; /* Stack items vertically */
+    height: auto; /* Remove fixed height for responsiveness */
+    column-gap: 2rem; /* Reduce column gap for smaller screens */
+  }
+
+  .navi-gation-bar {
+    font-size: 20px; /* Slightly reduce font size */
+    margin-top: 4rem; /* Adjust margin for smaller screens */
+  }
+
+  .truck-data-warranty {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to start for better readability */
+  }
+
+  .warranty-icon {
+    width: 30px; /* Smaller icon for smaller screens */
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .product-waranty-data p {
+    font-size: 14px; /* Smaller text size */
+  }
+
+  .product-data-info {
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .add-to-cart-style p {
+    font-size: 12px; /* Smaller font size */
+    padding: 4px 12px; /* Adjust padding */
+  }
+
+  .icon-btn-style {
+    font-size: 18px; /* Reduce icon button size */
+  }
+
+  .inc-dec {
+    font-size: 18px; /* Reduce size for smaller screens */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .single-product-grid {
+    width: 95%; /* Full width for mobile */
+    grid-template-columns: 1fr; /* Stack all items vertically */
+    column-gap: 1rem; /* Further reduce column gap */
+  }
+
+  .navi-gation-bar {
+    font-size: 18px; /* Further reduce font size */
+    margin-top: 2rem; /* Adjust margin for small screens */
+  }
+
+  .truck-data-warranty {
+    flex-direction: column; /* Stack vertically */
+    align-items: flex-start; /* Align items to start */
+    padding: 8px; /* Reduce padding */
+  }
+
+  .warranty-icon {
+    width: 25px; /* Smaller icon for mobile */
+    height: 25px;
+    font-size: 14px;
+  }
+
+  .product-waranty-data p {
+    font-size: 12px; /* Further reduce font size */
+  }
+
+  .product-data-info {
+    font-size: 12px; /* Further reduce font size */
+  }
+
+  .add-to-cart-style p {
+    font-size: 12px; /* Maintain smaller font size */
+    padding: 4px 10px; /* Adjust padding */
+  }
+
+  .icon-btn-style {
+    font-size: 16px; /* Smaller icon button size */
+  }
+
+  .inc-dec {
+    font-size: 16px; /* Smaller font size */
+  }
+}

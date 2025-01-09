@@ -1,0 +1,123 @@
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+}
+
+.error-content {
+  max-width: 500px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Error code styling */
+.error-code {
+  font-size: 72px;
+  color: #ff4757;
+  margin-bottom: 20px;
+}
+
+/* Error message styling */
+.error-message {
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+/* Error description styling */
+.error-description {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 30px;
+}
+
+/* Link styling */
+.error-home-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1e90ff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.error-home-link:hover {
+  background-color: #3742fa;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .error-content {
+    padding: 30px; /* Reduce padding for tablet devices */
+    max-width: 90%; /* Use more of the available width */
+  }
+
+  .error-code {
+    font-size: 60px; /* Adjust error code size for tablets */
+  }
+
+  .error-message {
+    font-size: 20px; /* Reduce error message size slightly */
+  }
+
+  .error-description {
+    font-size: 14px; /* Smaller description for tablets */
+  }
+
+  .error-home-link {
+    padding: 8px 16px; /* Adjust button size */
+  }
+}
+
+@media (max-width: 480px) {
+  .error-content {
+    padding: 20px; /* Further reduce padding for mobile devices */
+    max-width: 100%; /* Use full width on mobile */
+  }
+
+  .error-code {
+    font-size: 48px; /* Smaller error code for mobile */
+  }
+
+  .error-message {
+    font-size: 18px; /* Smaller error message */
+  }
+
+  .error-description {
+    font-size: 14px; /* Keep description size consistent on mobile */
+  }
+
+  .error-home-link {
+    padding: 10px 20px; /* Maintain button size for usability on mobile */
+  }
+}
+
+@media (min-width: 1200px) {
+  .error-content {
+    max-width: 600px; /* Increase max width for larger screens */
+    padding: 50px; /* More padding for large screens */
+  }
+
+  .error-code {
+    font-size: 80px; /* Bigger font size on large screens */
+  }
+
+  .error-message {
+    font-size: 28px; /* Larger font for the error message */
+  }
+
+  .error-description {
+    font-size: 18px; /* Slightly larger description text */
+  }
+
+  .error-home-link {
+    padding: 12px 24px; /* Larger button for large screens */
+  }
+}

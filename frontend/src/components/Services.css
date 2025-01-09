@@ -1,0 +1,76 @@
+.grid3 {
+  margin-top: 3rem;
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 columns of equal width */
+  column-gap: 3rem; /* Spacing between columns */
+  height: 15rem;
+}
+
+.service-1 {
+  background-color: rgb(230, 240, 240);
+  border-radius: 5px;
+}
+.column-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(230, 240, 240);
+  border-radius: 5px;
+  font-size: 20px;
+  height: 44%;
+}
+.middle-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.column-1 h3 {
+  font-size: 20px;
+}
+.column-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  background-color: rgb(230, 240, 240);
+  border-radius: 5px;
+  font-size: 20px;
+  height: 44%;
+}
+.column-2 h3 {
+  font-size: 20px;
+}
+.service-3 {
+  background-color: rgb(230, 240, 240);
+  border-radius: 5px;
+}
+.text-style {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100%; /* Full height of the parent container */
+  width: 100%; /* Full width of the parent container */
+}
+.icon-style {
+  color: #1e90ff; /* Use a vibrant blue color for a modern look */
+  font-size: 60px; /* Slightly larger for emphasis */
+  padding: 10px; /* Add padding to give the icon some breathing space */
+  background-color: #ffffff; /* White background to make the icon stand out */
+  border-radius: 50%; /* Make the icon circular */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition effects */
+}
+
+.icon-style:hover {
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  color: #ff6347; /* Change the color on hover to a red-orange */
+}

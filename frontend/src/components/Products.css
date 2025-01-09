@@ -1,0 +1,117 @@
+/* Ensures the products container is centered in the middle of the body */
+.products-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f4f4f9; /* Soft background color for contrast */
+  padding: 20px;
+}
+
+/* Products grid layout */
+.products-grid {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr; /* Two columns layout */
+  gap: 30px; /* Gap between filter and products */
+  width: 65%; /* Slightly wider grid */
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+}
+
+/* First column for filters */
+.products-column1 {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #e9ecef;
+  border-radius: 8px;
+}
+
+/* Second column for products */
+.products-column2 {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Top section for sorting/filtering */
+.top-row {
+  padding: 15px 0;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #eaeaea; /* Separation line */
+}
+
+.bottom-row {
+  padding: 15px 0;
+  flex-grow: 1;
+  overflow-y: auto; /* Enable scrolling */
+}
+
+/* Layout for sorting/filter options */
+.top-row-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-row-content select,
+.top-row-content input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.top-row-content select:hover,
+.top-row-content input:hover {
+  border-color: #007bff; /* Interactive hover effect */
+}
+
+/* Responsiveness adjustments */
+@media (max-width: 1024px) {
+  .products-grid {
+    width: 80%; /* Adjust grid width for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr; /* Stack columns vertically */
+    width: 90%; /* Full width with some margin */
+  }
+
+  .products-column1 {
+    margin-bottom: 20px; /* Spacing between filter and products */
+  }
+
+  .top-row-content {
+    flex-direction: column; /* Stack sorting/filtering options vertically */
+    align-items: flex-start;
+  }
+
+  .top-row-content select,
+  .top-row-content input {
+    width: 100%; /* Full width for inputs and selects */
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    width: 95%; /* Almost full width for small screens */
+  }
+
+  .top-row-content select,
+  .top-row-content input {
+    font-size: 0.9rem; /* Slightly reduce font size */
+    padding: 8px; /* Adjust padding for better fit */
+  }
+}

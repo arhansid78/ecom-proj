@@ -1,0 +1,99 @@
+.filter-section {
+  padding: 0.5rem;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  max-width: 350px; /* Keeps the filter section a reasonable width */
+  margin: 0 auto;
+  border: 1px solid #ddd;
+}
+
+.filter-section form {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.filter-section input[type="text"] {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.category-data {
+  text-align: left;
+}
+
+.category-data h4 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  color: #555;
+}
+
+.category-data button {
+  background-color: #e0e0e0;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 0.4rem 1rem;
+  border-radius: 3px;
+  margin: 0.2rem 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.category-data button:hover {
+  background-color: #d0d0d0;
+}
+
+.category-data button:active {
+  background-color: #b0b0b0;
+}
+
+/* Responsive styles */
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .filter-section {
+    max-width: 100%; /* Takes up full width on tablets and smaller */
+    padding: 1rem;
+  }
+
+  .filter-section input[type="text"] {
+    font-size: 0.9rem; /* Slightly smaller font size */
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .category-data h4 {
+    font-size: 0.9rem; /* Smaller headings for smaller screens */
+  }
+
+  .category-data button {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.8rem; /* Smaller padding for buttons */
+  }
+}
+
+/* For screens smaller than 480px (mobile devices) */
+@media (max-width: 480px) {
+  .filter-section {
+    padding: 0.8rem;
+  }
+
+  .filter-section input[type="text"] {
+    font-size: 0.85rem;
+    padding: 0.5rem; /* Further reduce padding */
+  }
+
+  .category-data h4 {
+    font-size: 0.85rem;
+  }
+
+  .category-data button {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.7rem; /* Further reduce button padding */
+  }
+
+  .category-data button {
+    margin: 0.1rem 0; /* Reduce margins between buttons */
+  }
+}

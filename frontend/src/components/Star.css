@@ -1,0 +1,36 @@
+/* Rating section container */
+.rating-section {
+  display: flex;
+  align-items: center; /* Center icons vertically */
+  flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+}
+
+/* Icon styling */
+.icon {
+  color: orange;
+  font-size: 1.5rem; /* Adjust size as needed */
+  margin-right: 0.2rem; /* Space between icons */
+  transition: font-size 0.2s ease; /* Smooth resizing */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and medium screens */
+@media (max-width: 768px) {
+  .rating-section {
+    justify-content: center; /* Center align icons on smaller screens */
+  }
+
+  .icon {
+    font-size: 1.2rem; /* Slightly smaller icons */
+    margin-right: 0.1rem; /* Adjust margin for smaller screens */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .icon {
+    font-size: 1rem; /* Further reduce icon size */
+    margin-right: 0.05rem; /* Adjust margin for very small screens */
+  }
+}

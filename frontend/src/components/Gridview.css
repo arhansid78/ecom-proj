@@ -1,0 +1,30 @@
+.gridview-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* 3 columns by default for large screens */
+  column-gap: 2rem;
+  height: 20rem;
+  border-radius: 3px; /* Rounds the corners of the grid container */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .gridview-grid {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 columns for medium-sized screens (e.g., tablets) */
+    column-gap: 1.5rem; /* Slightly reduce gap for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .gridview-grid {
+    grid-template-columns: 1fr; /* Single column for smaller screens (e.g., phones) */
+    column-gap: 1rem; /* Further reduce gap for small screens */
+    height: auto; /* Let height adjust automatically for smaller screens */
+  }
+}
