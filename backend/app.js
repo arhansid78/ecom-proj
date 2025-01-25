@@ -14,16 +14,11 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-//app.use() ka kaam hai kisi specific path ke liye middleware ya router ko connect karna.
-//yaha pe (/users) ye base path set kiya hai (router wale sare) path isi pe route honge
+
 app.use("/users", router);
 
 //this line will start the server
-app.listen(3000);
-
-// const morgan = require("morgan");
-//Yeh code server ke root route ("/") par GET request handle karta hai
-// Jab koi user "/" open karega, toh response me "Home page" text bheja jayega
-// app.get("/", (req, res) => {
-//   res.send("Home page");
-// });
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

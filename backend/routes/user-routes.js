@@ -1,6 +1,6 @@
 const express = require("express");
 const userModel = require("../models/user-schema");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const Jwt = require("jsonwebtoken"); // Import JWT for token generation
 const { body, validationResult } = require("express-validator"); // Validator to check the data
 const authMiddleware = require("../middlewares/auth");

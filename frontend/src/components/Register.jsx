@@ -44,7 +44,6 @@ const Register = () => {
         // Login request
         response = await axios.post("/users/login", { username, password });
         localStorage.setItem("token", response.data.token); // Store token
-
         toast.success(response.data.message || "Login successful!");
         navigate("/"); // Redirect to the register page after logout
       } else {
